@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="58dp"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="27dp"
         android:background="@drawable/button"
         android:fontFamily="@font/light"
         android:padding="12dp"
@@ -23,25 +23,25 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="109dp"
+        android:fontFamily="@font/bold"
+        android:paddingLeft="30dp"
         android:paddingTop="50dp"
         android:text="Welcome!"
-        android:fontFamily="@font/bold"
         android:textColor="@color/black"
 
         android:textSize="40dp" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/light"
-        android:paddingLeft="10dp"
+        android:paddingLeft="32dp"
         android:paddingTop="120dp"
+        android:text="Scan qr codes easily. ."
         android:textColor="@color/black"
-        android:textSize="15dp"
-        android:text="Scan qr codes easily. ." />
+        android:textSize="15dp" />
 
 </RelativeLayout>
