@@ -17,7 +17,7 @@ public class VideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video);
 
         final String str = "https://inator.in";
-        //final Uri uri = Uri.parse(str);
+        final Uri uri = Uri.parse(str);
         WebView wb = findViewById(R.id.webview);
         wb.getSettings().setJavaScriptEnabled(true);
         wb.getSettings().setLoadWithOverviewMode(true);
