@@ -20,9 +20,10 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
 
     @Override
     public void handleResult(Result result) {
-        Intent intent = new Intent(ScanActivity.this,VideoActivity.class);
+        //Intent intent = new Intent(ScanActivity.this,VideoActivity.class);
+        Intent intent = new Intent(ScanActivity.this,arAcrivity.class);
         //passing the url from qr code to videoactivity
-        intent.putExtra("url",result.toString());
+        //intent.putExtra("url",result.toString());
         startActivity(intent);
         //MainActivity.textView.setText(result.getText());
         //onBackPressed();
