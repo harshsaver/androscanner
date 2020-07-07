@@ -20,7 +20,7 @@ public class VideoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         //loading url from qr code
         final String str = intent.getStringExtra("url");
-        final Uri uri = Uri.parse(str);
+        //final Uri uri = Uri.parse(str);
         WebView wb = findViewById(R.id.webview);
         wb.getSettings().setJavaScriptEnabled(true);
         wb.getSettings().setLoadWithOverviewMode(true);
