@@ -14,12 +14,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
-    static TextView textView;
+    //static TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = (TextView)findViewById(R.id.textView);
+        //textView = (TextView)findViewById(R.id.textView);
         button = (Button)findViewById(R.id.button);
 
         //check if permission is granted or not

@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity implements ZXingScannerView
 
     @Override
     public void handleResult(Result result) {
-        MainActivity.textView.setText(result.getText());
+//        MainActivity.textView.setText(result.getText());
         onBackPressed();
     }
 
