@@ -12,10 +12,121 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/giffer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/clap"
-            />
+            android:layout_centerInParent="true"
+            android:layout_margin="60dp"/>
+        <LinearLayout
+            android:id="@+id/lin_bt_bot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="12dp"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/bt_b1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Fall"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_b2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Kung Fu"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_b3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Pool"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_b4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Wardrobe"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_bt_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_alignParentTop="true"
+            android:layout_margin="12dp"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/bt_t1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Idle"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_t2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Fall"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_t3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="\?"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/bt_t4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/light"
+                android:text="Spider"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+
+        </LinearLayout>
         <!--<ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
