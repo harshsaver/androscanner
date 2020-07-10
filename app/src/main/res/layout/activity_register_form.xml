@@ -5,15 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signup"
-    tools:context=".SignUpForm">
+    tools:context=".RegisterForm">
 
+
+    <ImageView
+        android:id="@+id/goBack"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:elevation="5dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+        app:srcCompat="@drawable/arrow" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold"
-        android:text="Log In"
+        android:text="Register"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +44,7 @@
         android:backgroundTint="@color/white"
         android:fontFamily="@font/light"
         android:textColor="@color/white"
-        android:hint="User Name"
+        android:hint="Email"
         android:textColorHint="@color/hint_color"
         android:ems="10"
         android:alpha="0.9"
@@ -85,45 +99,6 @@
         app:layout_constraintVertical_bias="0.11"
         app:srcCompat="@drawable/key" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView9"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="or login using"-->
-<!--        android:fontFamily="@font/light"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="15sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.104"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"-->
-<!--        app:layout_constraintVertical_bias="0.936" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView9"-->
-<!--        android:layout_width="28dp"-->
-<!--        android:layout_height="28dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.119"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/textView9"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"-->
-<!--        app:layout_constraintVertical_bias="0.936"-->
-<!--        app:srcCompat="@drawable/facebook" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView10"-->
-<!--        android:layout_width="28dp"-->
-<!--        android:layout_height="28dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.114"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/imageView9"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"-->
-<!--        app:layout_constraintVertical_bias="0.936"-->
-<!--        app:srcCompat="@drawable/google" />-->
-
     <Button
         android:id="@+id/loginButton"
         android:layout_width="77sp"
@@ -135,22 +110,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
         app:layout_constraintVertical_bias="0.184" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.59"
-        android:fontFamily="@font/light"
-        android:text="Forgot password?"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
-        app:layout_constraintVertical_bias="0.061" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -166,37 +125,74 @@
         app:srcCompat="@drawable/arrow" />
 
     <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/light"
+        android:text="or login using"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/google" />
+
+    <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:alpha="0.7"
         android:fontFamily="@font/light"
-        android:text="Don't have an account?"
+        android:text="Already have an account?"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.746" />
 
     <TextView
         android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:fontFamily="@font/light"
-        android:text="Register"
+        android:text="Login"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.746" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

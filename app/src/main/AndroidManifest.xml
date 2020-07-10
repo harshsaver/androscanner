@@ -13,7 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUpForm" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Dashboard" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".SelectionForm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterForm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUpForm"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CricketRegister"
             android:theme="@style/AppTheme.NoActionBar" />
