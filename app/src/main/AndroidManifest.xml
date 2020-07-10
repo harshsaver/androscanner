@@ -13,13 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".CricketRegister" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SignUpForm" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CricketRegister"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Cricket_login"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
-        <activity android:name=".arAcrivity"></activity>
+        <activity android:name=".arAcrivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".ScanActivity" />
         <activity android:name=".MainActivity">
