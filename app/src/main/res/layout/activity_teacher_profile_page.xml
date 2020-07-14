@@ -41,8 +41,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView16"
@@ -98,7 +97,7 @@
                 android:fontFamily="@font/light"
                 android:textSize="13sp"
                 android:layout_marginLeft="40dp"
-                android:text="Standard X, Div 5" />
+                android:text="PHD Maths" />
         </RelativeLayout>
 
         <TextView
@@ -109,17 +108,17 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:paddingLeft="15dp"
-            android:background="@color/pastel_green"
+            android:background="@drawable/rounded_heading"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:text="Personal Information" />
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="191dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@color/black_bg_green"
-            android:layout_height="185dp">
+            android:background="@color/black_bg_green">
 
             <ListView
                 android:id="@+id/profileList"
@@ -137,16 +136,17 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:paddingLeft="15dp"
-            android:background="@color/pastel_pink"
+            android:background="@drawable/round_head1"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:text="Education" />
+
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="64dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@color/black_bg_red"
-            android:layout_height="185dp">
+            android:background="@color/black_bg_red">
 
             <ListView
                 android:id="@+id/educationList"
@@ -163,10 +163,10 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
-            android:background="@color/pastel_blue"
+            android:paddingLeft="15dp"
+            android:background="@drawable/round_head2"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
-            android:paddingLeft="15dp"
             android:text="Classes Teaching" />
         <RelativeLayout
             android:background="@color/black_bg_blue"
@@ -282,7 +282,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
-            android:background="@color/pastel_yellow"
+            android:background="@drawable/round_head3"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:paddingLeft="15dp"
@@ -400,7 +400,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
-            android:background="@color/pastel_red"
+            android:background="@drawable/round_head4"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:paddingLeft="15dp"
@@ -425,7 +425,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
-            android:background="@color/pastel_purple"
+            android:background="@drawable/round_head5"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:paddingLeft="15dp"
