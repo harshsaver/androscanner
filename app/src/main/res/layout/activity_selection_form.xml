@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_black"
+    android:background="@color/dark_black"
     tools:context=".SelectionForm">
 
 
@@ -27,7 +27,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/light"
         android:text="I am a"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -82,15 +82,17 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="67dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/light"
-        android:text="Staff"
+        android:singleLine="true"
+        android:text="Non-teaching Faculty"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/staff"
         app:layout_constraintVertical_bias="0.0" />

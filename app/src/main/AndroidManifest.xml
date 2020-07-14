@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dashboard" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".TeacherProfilePage"></activity>
+        <activity
+            android:name=".StudentProfilePage"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SelectionForm"
             android:theme="@style/AppTheme.NoActionBar" />
