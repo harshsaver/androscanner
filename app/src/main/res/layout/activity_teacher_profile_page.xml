@@ -48,7 +48,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="16dp"
-                app:srcCompat="@drawable/school" />
+                app:srcCompat="@drawable/classses" />
 
             <TextView
                 android:id="@+id/textView22"
@@ -59,7 +59,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/light"
                 android:textSize="13sp"
-                android:text="School Name" />
+                android:text="Degree Name" />
 
             <ImageView
                 android:id="@+id/imageView17"
@@ -74,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:fontFamily="@font/light"
+                android:textSize="13sp"
                 android:layout_marginLeft="225dp"
                 android:text="Born 3 Jun3, 1999" />
         </RelativeLayout>
@@ -87,7 +88,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="16dp"
-                app:srcCompat="@drawable/classses" />
+                app:srcCompat="@drawable/school" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -97,7 +98,7 @@
                 android:fontFamily="@font/light"
                 android:textSize="13sp"
                 android:layout_marginLeft="40dp"
-                android:text="PHD Maths" />
+                android:text="Currently Teaching" />
         </RelativeLayout>
 
         <TextView
@@ -115,7 +116,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="191dp"
+            android:layout_height="214dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:background="@color/black_bg_green">
@@ -139,7 +140,7 @@
             android:background="@drawable/round_head1"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
-            android:text="Education" />
+            android:text="Specialization/Education" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -286,7 +287,7 @@
             android:textColor="@color/black"
             android:fontFamily="@font/bold"
             android:paddingLeft="15dp"
-            android:text="Activities" />
+            android:text="Clubs part of" />
         <RelativeLayout
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"

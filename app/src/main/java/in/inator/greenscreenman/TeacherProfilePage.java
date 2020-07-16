@@ -24,22 +24,11 @@ public class TeacherProfilePage extends AppCompatActivity {
         setContentView(R.layout.activity_teacher_profile_page);
 
         //personal info listView
-        String[] profile = {"Name","College Name","Gender","DOB","Identity No.","Address"};
+        String[] profile = {"Name","Gender","DOB","College Name","Position Title","Identity No.","Email Address"};
         ListView profileList = (ListView)findViewById(R.id.profileList);
         ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this,R.layout.text_view1,profile);
         profileList.setAdapter(arrayAdapter);
 
-        //project listView
-        ListView project = (ListView)findViewById(R.id.projectList);
-        ArrayList<HashMap<String, String>> pro = new ArrayList<>();
-        map = new HashMap<String, String>();
-        map.put("line1", "BubbleSort Visualizer");
-        map.put("line2", "app to visualize bubbleSort");
-        pro.add(map);
-        to[0] = R.id.item1;
-        to[1] = R.id.item2;
-        SimpleAdapter adap = new SimpleAdapter(this, pro, R.layout.two_item,from, to);
-        project.setAdapter(adap);
 
 
         //education listView
