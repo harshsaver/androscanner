@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_chat"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.000">
+
+        <ImageView
+            android:id="@+id/iv_sideview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/option" />
+
+        <TextView
+            android:id="@+id/tv_livescore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:text="LIVE SCORE"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="50dp"
+                app:srcCompat="@drawable/user" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/square"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.05"
+        android:background="@drawable/round_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyle_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/bot_rel"
+        android:layout_alignStart="@+id/square"
+        android:layout_alignLeft="@id/square"
+        android:layout_alignEnd="@+id/square"
+        android:layout_alignRight="@id/square"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:paddingLeft="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/bot_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/square"
+        android:layout_alignLeft="@id/square"
+        android:layout_alignRight="@id/square">
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/chat_btn"
+            android:textColor="@color/green"
+            android:textAllCaps="false"
+            android:text="Create"/>
+
+        <Button
+            android:id="@+id/join"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/create"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/chat_btn"
+            android:textColor="@color/green"
+            android:textAllCaps="false"
+            android:text="Join"/>
+
+        <EditText
+            android:id="@+id/et_chat"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/join"
+            android:background="@drawable/chat_btn"
+            android:textColorHint="#FF7E7979"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:hint="Type to comment" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/et_chat"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/plane" />
+    </RelativeLayout>
+
+</RelativeLayout>

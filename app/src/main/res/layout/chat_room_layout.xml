@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"
-            android:background="null"
+            android:background="@null"
             android:src="@drawable/ellipsis" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -108,7 +108,7 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:paddingTop="10dp"
-        android:background="null"
+        android:background="@null"
         android:src="@drawable/paperclip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

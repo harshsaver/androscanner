@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3D3131</color>
-    <color name="colorPrimaryDark">#201A3F</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="lightblue">#F6FBFF</color>
     <color name="black">#000000</color>
@@ -26,4 +26,6 @@
     <color name="black_bg_purple">#231B22</color>
     <color name="toolbar_blue">#373A8A</color>
     <color name="chat_blue">#EDF4F8</color>
+    <color name="gray">#333333</color>
+    <color name="green">#45996E</color>
 </resources>

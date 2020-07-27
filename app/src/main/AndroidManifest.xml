@@ -13,7 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TeacherProfilePage" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".Test" android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TeacherProfilePage"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".StudentProfilePage"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -39,11 +48,11 @@
         <activity android:name=".VideoActivity" />
         <activity android:name=".ScanActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 
