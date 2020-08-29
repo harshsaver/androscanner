@@ -43,6 +43,19 @@
         android:layout_marginRight="0dp"
         app:reverseLayout="true"
         app:stackFromEnd="true"
+        android:paddingLeft="20dp" /><androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyle_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/bot_rel"
+        android:layout_alignStart="@+id/square"
+        android:layout_alignLeft="@id/square"
+        android:layout_alignEnd="@+id/square"
+        android:layout_alignRight="@id/square"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
         android:paddingLeft="20dp" />
 
     <RelativeLayout
@@ -98,5 +111,6 @@
             android:layout_marginBottom="5dp"
             android:src="@drawable/plane" />
     </RelativeLayout>
+
 
 </RelativeLayout>

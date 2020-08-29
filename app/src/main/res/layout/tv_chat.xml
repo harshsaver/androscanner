@@ -34,4 +34,15 @@
         android:layout_marginStart="10dp"
         android:text="comments"/>
 
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="220dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_user"
+        android:src="@drawable/heart" />
+
+
 </RelativeLayout>

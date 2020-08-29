@@ -2,15 +2,25 @@ package in.inator.greenscreenman;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
+import android.view.Menu;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -23,7 +33,7 @@ public class arAcrivity extends AppCompatActivity {
     String model = "null";
     GifImageView giffer;
     LinearLayout top,bottom;
-    Button t1,t2,t3,t4,b1,b2,b3,b4;
+    Button t1,t2,t3,t4,b1,b2,b3,b4,takeScreenShot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +115,35 @@ public class arAcrivity extends AppCompatActivity {
                     giffer.setImageResource(R.drawable.i_wardrobe);
                 }
             });
+        }
+        takeScreenShot = findViewById(R.id.take_ss);
+        takeScreenShot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bitmap bitmap = takeScreenshot();
+                saveBitmap(bitmap);
+            }
+        });
+    }
+    public Bitmap takeScreenshot() {
+        View rootView = findViewById(android.R.id.content).getRootView();
+        rootView.setDrawingCacheEnabled(true);
+        return rootView.getDrawingCache();
+    }
+
+    public void saveBitmap(Bitmap bitmap) {
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/screenshot"+System.currentTimeMillis()+".png");
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(imagePath);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            Toast.makeText(this, "Screnshot saved", Toast.LENGTH_SHORT).show();
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            Log.e("FileNotFound", e.getMessage(), e);
+        } catch (IOException e) {
+            Log.e("Exception", e.getMessage(), e);
         }
     }
 
