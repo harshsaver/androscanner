@@ -14,13 +14,12 @@
         android:fontFamily="@font/fredoka"
         android:text="CricInShots"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="37sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.194" />
 
     <TextView
         android:id="@+id/textView"
@@ -79,6 +78,7 @@
         android:height="58sp"
         android:background="@drawable/button3"
         android:fontFamily="@font/text"
+        android:textAlignment="center"
         android:text="Register"
         android:textColor="@color/white"
         android:textSize="22sp"
@@ -101,7 +101,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/relativetext"
         app:layout_constraintVertical_bias="0.698" />
 
     <TextView
@@ -120,29 +120,47 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        android:alpha="0.65"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintVertical_bias="0.518"
-        app:srcCompat="@drawable/user" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="330dp"
-        android:layout_height="19dp"
+    <RelativeLayout
+        android:id="@+id/relativetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.257"
-        app:srcCompat="@drawable/img" />
+        app:layout_constraintVertical_bias="0.248">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1.3dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="9dp"
+            android:layout_toStartOf="@+id/orloginusing"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/orloginusing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or login using"
+            android:textColor="@color/white"
+            android:fontFamily="@font/text"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1.3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="9dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:layout_toEndOf="@id/orloginusing"
+            android:background="@color/white"/>
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -152,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/relativetext"
         app:layout_constraintVertical_bias="0.144"
         app:srcCompat="@drawable/facebook" />
 
@@ -164,7 +182,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/relativetext"
         app:layout_constraintVertical_bias="0.144"
         app:srcCompat="@drawable/google" />
 

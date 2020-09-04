@@ -14,7 +14,7 @@
         android:fontFamily="@font/fredoka"
         android:text="CricInShots"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="37sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
         android:id="@+id/textView3"
@@ -55,20 +55,19 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facebook"
         android:width="330sp"
         android:height="58sp"
         android:background="@drawable/button1"
-
-        android:textSize="15sp"
         android:fontFamily="@font/text"
+        android:text="Facebook"
         android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.197" />
 
     <Button
         android:id="@+id/button3"
