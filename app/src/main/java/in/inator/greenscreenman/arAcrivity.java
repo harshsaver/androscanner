@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
@@ -30,6 +33,7 @@ public class arAcrivity extends AppCompatActivity {
     private Camera camera=null;
     private boolean inPreview=false;
     private boolean cameraConfigured=false;
+    private Camera.PictureCallback pictureCallback;
     String model = "null";
     GifImageView giffer;
     LinearLayout top,bottom;
@@ -120,23 +124,45 @@ public class arAcrivity extends AppCompatActivity {
         takeScreenShot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap bitmap = takeScreenshot();
-                saveBitmap(bitmap);
+                camera.takePicture(null,null,pictureCallback);
             }
         });
+        pictureCallback = new Camera.PictureCallback() {
+            @Override
+            public void onPictureTaken(byte[] data, Camera camera) {
+                Bitmap surfaceTop = takeScreenshot();
+                Matrix matrix = new Matrix();
+                matrix.postRotate(90);
+                Bitmap bmp = BitmapFactory.decodeByteArray(data,0,data.length);
+                Bitmap cameraPreview = Bitmap.createBitmap(bmp,0,0,bmp.getWidth(),bmp.getHeight(),matrix ,true);
+                cameraPreview = Bitmap.createScaledBitmap(cameraPreview,surfaceTop.getWidth(),surfaceTop.getHeight(),true);
+                
+                saveBitmap(overlay(cameraPreview,surfaceTop));
+                startPreview();
+            }
+        };
     }
+
+    //to combine two bitmap images
+    public static Bitmap overlay(Bitmap bmp1, Bitmap bmp2) {
+        Bitmap bmOverlay = Bitmap.createBitmap(bmp2.getWidth(), bmp2.getHeight(), bmp2.getConfig());
+        Canvas canvas = new Canvas(bmOverlay);
+        canvas.drawBitmap(bmp1, new Matrix(), null);
+        canvas.drawBitmap(bmp2, 0, 0, null);
+        return bmOverlay;
+    }
+
     public Bitmap takeScreenshot() {
-        View rootView = findViewById(android.R.id.content).getRootView();
+        View rootView = findViewById(R.id.fr);
         rootView.setDrawingCacheEnabled(true);
         return rootView.getDrawingCache();
     }
 
     public void saveBitmap(Bitmap bitmap) {
-        File imagePath = new File(Environment.getExternalStorageDirectory() + "/screenshot"+System.currentTimeMillis()+".png");
-        FileOutputStream fos;
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/screenshot"+System.currentTimeMillis()+".jpeg");
         try {
-            fos = new FileOutputStream(imagePath);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            FileOutputStream fos = new FileOutputStream(imagePath);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             Toast.makeText(this, "Screnshot saved", Toast.LENGTH_SHORT).show();
             fos.flush();
             fos.close();
